@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="668.0" prefWidth="451.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomePageController">
+    <center>
+        <VBox prefHeight="557.0" prefWidth="451.0" BorderPane.alignment="CENTER">
+            <children>
+                <BorderPane prefHeight="600.0" prefWidth="451.0">
+                    <center>
+                        <BorderPane prefHeight="674.0" prefWidth="451.0" BorderPane.alignment="CENTER">
+                            <top>
+                                <ImageView fitHeight="457.0" fitWidth="381.0" BorderPane.alignment="CENTER">
+                                    <image>
+                                        <Image url="@../Resources/Images/HomePage.jpg" />
+                                    </image>
+                                </ImageView>
+                            </top>
+                            <bottom>
+                                <JFXButton alignment="CENTER" onAction="#startMessaging" prefHeight="58.0" prefWidth="157.0" style="-fx-background-color: #3498db; -fx-background-radius: 5em;" text="Start Messaging" textFill="WHITE" BorderPane.alignment="CENTER">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                            </bottom>
+                            <center>
+                                <Label style="-fx-background-color: #0000;" text="Designed by Hanieh ^_^" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                    <font>
+                                        <Font name="AR ESSENCE" size="21.0" />
+                                    </font>
+                                </Label>
+                            </center>
+                        </BorderPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

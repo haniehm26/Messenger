@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="450.0" prefWidth="450.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CreateGroup">
+   <children>
+      <JFXTextField fx:id="groupName" focusColor="#3498db" labelFloat="true" layoutX="35.0" layoutY="210.0" promptText="Group Name" />
+      <JFXButton fx:id="choose" layoutX="55.0" layoutY="49.0" onAction="#chooseGroupPic" text=" ">
+         <graphic>
+            <ImageView fx:id="imageView" fitHeight="106.0" fitWidth="101.0">
+               <image>
+                  <Image url="@../Resources/Images/Photo.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="submit" layoutX="55.0" layoutY="381.0" onAction="#submit" prefHeight="55.0" prefWidth="129.0" style="-fx-background-color: #3498db; -fx-background-radius: 3em;" text="Submit" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="select" layoutX="35.0" layoutY="302.0" onAction="#selectMembers" prefHeight="55.0" prefWidth="169.0" style="-fx-background-color: #3498db; -fx-background-radius: 3em;" text="Select Members" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXScrollPane layoutX="223.0" layoutY="66.0" prefHeight="350.0" prefWidth="208.0">
+         <children>
+            <JFXListView fx:id="listView" />
+         </children>
+      </JFXScrollPane>
+   </children>
+</AnchorPane>

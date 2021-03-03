@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="668.0" prefWidth="451.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegisterController">
+    <children>
+      <JFXButton layoutX="111.0" layoutY="46.0" onAction="#setPicture" text=" ">
+         <graphic>
+              <ImageView fx:id="imageView" fitHeight="200.0" fitWidth="200.0">
+                  <image>
+                      <Image fx:id="image" url="@../Resources/Images/SetProfile.png" />
+                  </image>
+              </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+        <JFXTextField fx:id="name" focusColor="#3498db" labelFloat="true" layoutX="135.0" layoutY="299.0" prefHeight="31.0" prefWidth="200.0" promptText="Name" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="116.0" />
+        <JFXTextField fx:id="username" focusColor="#3498db" labelFloat="true" layoutX="135.0" layoutY="383.0" prefHeight="31.0" prefWidth="200.0" promptText="Username" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="116.0" />
+        <JFXPasswordField fx:id="password" focusColor="#3498db" labelFloat="true" layoutX="135.0" layoutY="469.0" prefHeight="31.0" prefWidth="200.0" promptText="Password" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="116.0" />
+        <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="100.0" layoutY="389.0">
+            <image>
+                <Image url="@../Resources/Images/User.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="100.0" layoutY="471.0">
+            <image>
+                <Image url="@../Resources/Images/Lock.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="100.0" layoutY="306.0">
+            <image>
+                <Image url="@../Resources/Images/Circle.png" />
+            </image>
+        </ImageView>
+        <JFXButton layoutX="158.0" layoutY="553.0" onAction="#submit" prefHeight="39.0" prefWidth="145.0" style="-fx-background-color: #3498db; -fx-background-radius: 5em;" text="Sumbit" textFill="WHITE" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="148.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+      <JFXButton layoutX="158.0" layoutY="611.0" onAction="#backToSignIn" prefHeight="39.0" prefWidth="145.0" style="-fx-background-color: #3498db; -fx-background-radius: 5em;" text="Back To Sign In" textFill="WHITE" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="148.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+    </children>
+</AnchorPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="858.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ChatController">
+    <center>
+        <VBox prefHeight="829.0" prefWidth="1155.0" BorderPane.alignment="CENTER">
+            <children>
+            <HBox prefHeight="150.0" prefWidth="565.0">
+               <children>
+                  <Label fx:id="userName" prefHeight="42.0" prefWidth="425.0" text=" ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="14.0" prefWidth="345.0" style="-fx-background-color: #ffff;" />
+                  <JFXButton prefHeight="42.0" prefWidth="34.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="37.0">
+                           <image>
+                              <Image url="@../Resources/Images/Search.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+                <JFXScrollPane prefHeight="580.0" prefWidth="565.0">
+               <children>
+                  <JFXListView fx:id="chatView" />
+                  <Label fx:id="startLabel" prefHeight="25.0" prefWidth="289.0" style="-fx-background-color: #b5b5b5; -fx-background-radius: 5em;" text="  Please select a chat to start messaging  ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+                </JFXScrollPane>
+            <Line endX="464.0" startX="-100.0" />
+                <HBox prefHeight="108.0" prefWidth="565.0">
+                    <children>
+                        <JFXButton fx:id="fileButton" onAction="#fileChooser" style="-fx-background-color: #ffff;" text=" ">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="43.0">
+                                    <image>
+                                        <Image url="@../Resources/Images/Attachment.png" />
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXTextArea fx:id="chatBox" focusColor="#3498db" prefHeight="22.0" prefWidth="350.0" promptText="Write a message ...">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                     <HBox.margin>
+                        <Insets bottom="8.0" />
+                     </HBox.margin>
+                        </JFXTextArea>
+                        <JFXButton fx:id="emojiButton" prefHeight="35.0" prefWidth="32.0" style="-fx-background-color: #ffff;" text=" ">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0">
+                                    <image>
+                                        <Image url="@../Resources/Images/Imoji.png" />
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="sendButton" onAction="#sendMessage" text=" ">
+                            <graphic>
+                                <ImageView fitHeight="31.0" fitWidth="31.0">
+                                    <image>
+                                        <Image url="@../Resources/Images/Send.png" />
+                                    </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton text=" ">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <VBox prefHeight="611.0" prefWidth="293.0" BorderPane.alignment="CENTER">
+            <children>
+                  <HBox prefHeight="58.0" prefWidth="293.0">
+                      <children>
+                          <JFXButton onAction="#menuBar" prefHeight="37.0" prefWidth="29.0" style="-fx-background-color: #ffff;" text=" ">
+                              <graphic>
+                                  <ImageView fitHeight="24.0" fitWidth="30.0">
+                                      <image>
+                                          <Image url="@../Resources/Images/MenuBar1.png" />
+                                      </image>
+                                  </ImageView>
+                              </graphic>
+                              <cursor>
+                                  <Cursor fx:constant="HAND" />
+                              </cursor>
+                          </JFXButton>
+                          <TextField fx:id="search" onKeyPressed="#search" prefHeight="36.0" prefWidth="236.0" promptText="Search">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin></TextField>
+                      </children>
+                  </HBox>
+                <JFXScrollPane prefHeight="537.0" prefWidth="293.0">
+               <children>
+                  <JFXListView fx:id="contactView" prefHeight="550.0" prefWidth="293.0" />
+               </children>
+                </JFXScrollPane>
+            </children>
+        </VBox>
+    </left>
+</BorderPane>

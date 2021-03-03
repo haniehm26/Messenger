@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="451.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuBarController">
+   <top>
+      <AnchorPane prefHeight="152.0" prefWidth="451.0" style="-fx-background-color: #3498db;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="userImage" layoutX="64.0" layoutY="41.0" prefHeight="70.0" prefWidth="174.0" text=" ">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></JFXButton>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="407.0" prefWidth="451.0" style="-fx-background-color: #ffff;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#newGroup" prefHeight="81.0" prefWidth="183.0" text="  New Group">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="52.0">
+                     <image>
+                        <Image url="@../Resources/Images/Group.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="25.0" left="25.0" top="25.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#newChannel" prefHeight="82.0" prefWidth="197.0" text="  New Channel">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../Resources/Images/Channel.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="25.0" left="25.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#setting" prefHeight="84.0" prefWidth="161.0" text="  Setting">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="47.0">
+                     <image>
+                        <Image url="@../Resources/Images/Settings.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <JFXButton onAction="#backToChat" prefHeight="55.0" prefWidth="169.0" style="-fx-background-color: #3498db; -fx-background-radius: 3em;" text="Back To Chat" textFill="WHITE" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </JFXButton>
+   </bottom>
+</BorderPane>

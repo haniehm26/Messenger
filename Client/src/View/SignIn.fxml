@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="668.0" prefWidth="451.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SignInController">
+   <children>
+      <JFXTextField fx:id="username" focusColor="#3498db" labelFloat="true" layoutX="126.0" layoutY="141.0" prefHeight="31.0" prefWidth="262.0" promptText="Username" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="95.0" />
+      <JFXPasswordField fx:id="password" focusColor="#3498db" labelFloat="true" layoutX="126.0" layoutY="230.0" prefHeight="39.0" prefWidth="262.0" promptText="Password" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="95.0" />
+      <JFXButton layoutX="162.0" layoutY="402.0" onAction="#signIn" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: #3498db; -fx-background-radius: 5em;" text="Sign In" textFill="WHITE" AnchorPane.leftAnchor="162.0" AnchorPane.rightAnchor="161.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="74.0" layoutY="149.0">
+         <image>
+            <Image url="@../Resources/Images/User.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="75.0" layoutY="238.0">
+         <image>
+            <Image url="@../Resources/Images/Lock.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="71.0" layoutY="600.0" onAction="#register" prefHeight="39.0" prefWidth="310.0" style="-fx-background-color: #3498db; -fx-background-radius: 5em;" text="Don't You Have Account Yet? Register Here" textFill="WHITE" underline="true" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="70.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton layoutX="152.0" layoutY="305.0" onAction="#forgetPassword" prefHeight="29.0" prefWidth="149.0" style="-fx-background-color: #3498db; -fx-background-radius: 5em;" text="Forget Password?" textFill="WHITE" underline="true" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="150.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="451.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SettingController">
+   <children>
+      <VBox layoutX="10.0" layoutY="13.0" prefHeight="668.0" prefWidth="451.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="103.0" fitWidth="109.0">
+               <image>
+                  <Image url="@../Resources/Images/SetProfile.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="160.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <JFXButton fx:id="newImage" onAction="#selectNewImage" prefHeight="32.0" prefWidth="159.0" style="-fx-background-color: #3498db; -fx-background-radius: 3em;" text="Select New Image" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="140.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXTextField fx:id="newUsername" focusColor="#3498db" labelFloat="true" layoutX="90.0" layoutY="245.0" promptText="New Username">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="80.0" right="80.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="newName" focusColor="#3498db" labelFloat="true" layoutX="90.0" layoutY="235.0" promptText="New Name">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="80.0" right="80.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="newPassword" focusColor="#3498db" labelFloat="true" prefHeight="32.0" prefWidth="291.0" promptText="New Password">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="80.0" right="80.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXButton fx:id="edit" onAction="#edit" prefHeight="37.0" prefWidth="136.0" style="-fx-background-color: #3498db; -fx-background-radius: 3em;" text="Edit Information" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="40.0" left="150.0" top="25.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Line endX="350.0" startX="-100.0" />
+            <JFXButton fx:id="logOut" onAction="#logOut" prefHeight="58.0" prefWidth="115.0" style="-fx-background-color: #ae2e2e; -fx-background-radius: 3em;" text="Log Out" textFill="#e4e4e4">
+               <VBox.margin>
+                  <Insets bottom="4.0" left="160.0" top="6.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Line endX="350.0" startX="-100.0">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Line>
+            <JFXButton onAction="#backToMenu" prefHeight="55.0" prefWidth="169.0" style="-fx-background-color: #3498db; -fx-background-radius: 3em;" text="Back To Menu" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="133.0" top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
